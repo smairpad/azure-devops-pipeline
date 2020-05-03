@@ -25,7 +25,7 @@ stages:
     - bash: ls -R $(Build.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory'
+        SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: |
           **/*.yml
           **/*.tf
