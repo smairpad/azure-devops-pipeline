@@ -1,0 +1,20 @@
+trigger:
+- master
+
+strategy:
+   matrix:
+     linux:
+       operatingSystem: 'ubuntu-latest'
+     mac:
+       operatingSystem: 'macos-latest'
+       
+
+
+pool:
+  vmImage: $(operatingSystem)
+
+steps:
+- script: echo Hello, world and this is $(operatingSystem)
+- bash: uname -a 
+  displayName: 'Run a one-line script'
+
