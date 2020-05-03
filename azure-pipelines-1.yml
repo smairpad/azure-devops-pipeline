@@ -24,7 +24,7 @@ steps:
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
-- script: echo "$(publickey.secureFile)""
+- script: echo "$(publickey.secureFile)"
   displayName: 'Run a one-line script'
 - task: TerraformCLI@0
   inputs:
